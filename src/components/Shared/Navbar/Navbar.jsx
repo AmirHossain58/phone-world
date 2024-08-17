@@ -4,37 +4,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
 import avatarImg from '../../../assets/images/placeholder.jpg'
+import toast from 'react-hot-toast'
 
 const Navbar = () => {
   const { user, logOut } = useAuth()
   const [isOpen, setIsOpen] = useState(false)
-  // for modal
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const closeModal = () => {
-    setIsModalOpen(false)
-  }
-const modalHandler=async()=>{
+ 
 
-try{
-  const newUser={
-    email:user?.email,
-    name:user?.displayName,
-    role:'guest',
-    status:'Requested'
-  }
-  const {data}=await axiosSecure.put('/user',newUser)
-  if(data.modifiedCount>0){
-    toast.success('Success, please Wait for Admin Approval')
-  }else{
-    toast.success('Please!,  Wait for Admin Approval👊')
-  }
-}catch(err){
-  console.log(err);
-  toast.error(err.message)
-}finally{
-  closeModal(false)
-}
-}
   return (
     <div className='fixed w-full bg-white z-10 shadow-sm'>
       <div className='py-4 border-b-[1px]'>
