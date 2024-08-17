@@ -2,6 +2,7 @@
 
 This project is a Single Page Application (SPA) built using the MERN stack (MongoDB, Express.js, React.js, Node.js). The frontend enables users to interact with various functionalities such as pagination, searching, categorization, and sorting of products. It also incorporates user authentication via Firebase.
 
+[## Live Link ](https://phone-world-bd.web.app/)
 ## server code (https://github.com/AmirHossain58/phone-world-server.git)
 
 ## Table of Contents
