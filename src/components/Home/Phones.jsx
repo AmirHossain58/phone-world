@@ -85,7 +85,7 @@ const Phones = () => {
     console.log(value);
     setCurrentPage(value);
   };
-
+// search feature based on the product name.
   const handleSearch = (e) => {
     e.preventDefault();
 
