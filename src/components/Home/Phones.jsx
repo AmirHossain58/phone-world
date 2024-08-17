@@ -116,6 +116,7 @@ const Phones = () => {
               ))}
             </select>
           </div>
+          {/* filter by category box */}
           <div>
             <select
               onChange={(e) => {
@@ -135,7 +136,7 @@ const Phones = () => {
               ))}
             </select>
           </div>
-
+              {/* search box  */}
           <form onSubmit={handleSearch}>
             <div className="flex p-1 overflow-hidden border rounded-lg    focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
               <input
