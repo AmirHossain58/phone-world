@@ -154,6 +154,7 @@ const Phones = () => {
               </button>
             </div>
           </form>
+          {/* sorting by price and date */}
           <div>
             <select
               onChange={(e) => {
