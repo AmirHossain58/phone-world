@@ -42,18 +42,6 @@ const Phones = () => {
   const [loading, setLoading] = useState(false);
   const [priceRange, setPriceRange] = useState([0, 2000]);
   useEffect(() => {
-    // fetch("/phone.json")
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     // const c=data.map(d=>console.log(d.category)
-    //     const c = data.map((d) => d.brand);
-    //     // console.log(c);
-    //     const uniqueArray = [...new Set(c)];
-
-    //     console.log(uniqueArray);
-    //     c.map((d) => {});
-    //   });
-
     const getData = async () => {
       setLoading(true);
       const { data } = await axios(
@@ -73,7 +61,6 @@ const Phones = () => {
   const handlePriceChange = (min, max) => {
     setPriceRange([min, max]);
   };
-  // console.log(phones);
   useEffect(() => {
     const getCount = async () => {
       const { data } = await axios(
@@ -83,14 +70,13 @@ const Phones = () => {
           priceRange[0]
         }&maxPrice=${priceRange[1]}`
       );
-      // console.log(data);
 
       setCount(data.count);
     };
     getCount();
   }, [filter, search, priceRange]);
 
-  // console.log(count);
+  // number Of Pages
   const numberOfPages = Math.ceil(count / itemsPerPage);
   const pages = [...Array(numberOfPages).keys()].map((element) => element + 1);
 
@@ -105,16 +91,6 @@ const Phones = () => {
 
     setSearch(searchText);
   };
-
-  // console.log(search);
-
-  // const { data: rooms = [], isLoading } = useQuery({
-  //   queryKey: ["rooms", category],
-  //   queryFn: async () => {
-  //     const { data } = await axiosCommon.get(`/rooms?category=${category}`);
-  //     return data;
-  //   },
-  // });
 
   return (
     <Container>
