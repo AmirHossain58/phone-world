@@ -35,9 +35,16 @@ const Card = ({ phone }) => {
           ></div>
         </div>
         <div className='font-semibold text-lg'>Brand: {phone?.brand}
-          {phone?.createdAt}
         </div>
-        <div className='font-light text-neutral-500'>{phone?.productName}</div>
+        <div className='flex flex-row items-center justify-between gap-1'>
+        <div className='font-light text-neutral-500'>
+          {phone?.productName}
+        </div>
+        <div className='font-light text-neutral-500'>
+        {new Date(phone?.createdAt).toLocaleDateString()}
+        </div>
+
+        </div>
         <div className='flex flex-row items-center justify-between gap-1'>
           <div className='font-semibold'>$ {phone?.price}</div>
           <div className='font-light'>⭐ {phone?.ratings}</div>

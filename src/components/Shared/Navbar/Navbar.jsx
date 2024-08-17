@@ -64,6 +64,26 @@ const Navbar = () => {
                     >
                       Home
                     </Link>
+                    <div
+                      className='block md:hidden px-4 py-3 hover:bg-neutral-100 transition font-semibold'
+                    >
+                      Offers
+                    </div>
+                    <div
+                      className='block md:hidden px-4 py-3 hover:bg-neutral-100 transition font-semibold'
+                    >
+                      Cover & Glass
+                    </div>
+                    <div
+                      className='block md:hidden px-4 py-3 hover:bg-neutral-100 transition font-semibold'
+                    >
+                      Used Phone
+                    </div>
+                    <div
+                      className='block md:hidden px-4 py-3 hover:bg-neutral-100 transition font-semibold'
+                    >
+                      Blog
+                    </div>
 
                     {user ? (
                       <>
