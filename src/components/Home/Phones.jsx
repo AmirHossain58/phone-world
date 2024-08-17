@@ -96,6 +96,7 @@ const Phones = () => {
     <Container>
       <div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-5 ">
+          {/* Categorize Brand Name */}
           <div>
             <select
               onChange={(e) => {
