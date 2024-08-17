@@ -25,6 +25,7 @@ const Login = () => {
          toast.error(err.message)
        }
     }
+    // login with email and password
   const handleSubmit=async(e)=>{
 e.preventDefault()
 const form=e.target
@@ -42,6 +43,7 @@ toast.success('SignUp Successfully')
   toast.error(err.message)
 }
 }
+// login with google
 const handleSignInWithGoogle=async()=>{
   try{
    await signInWithGoogle()
