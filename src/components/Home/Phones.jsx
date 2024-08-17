@@ -223,7 +223,7 @@ const Phones = () => {
       {loading ? (
         <LoadingSpinner />
       ) : phones && phones.length > 0 ? (
-        <div className="min-h-[calc(100vh-350px)] ">
+        <div className="min-h-[calc(100vh-390px)] ">
           <div className="pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8 ">
           {phones.map((phone, i) => (
             <Card key={i} phone={phone} />
@@ -234,13 +234,13 @@ const Phones = () => {
         <div className="flex items-center justify-center min-h-[calc(100vh-300px)]">
           <Heading
             center={true}
-            title="No Rooms Available In This Category!"
+            title="No Phones Available In This Category!"
             subtitle="Please Select Other Categories."
           />
         </div>
       )}
       {/* Pagination Section */}
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center my-12">
         {/* Previous Button */}
         <button
           disabled={currentPage === 1}

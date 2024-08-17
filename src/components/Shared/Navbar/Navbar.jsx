@@ -17,7 +17,7 @@ const Navbar = () => {
         <Container>
           <div className='flex flex-row  items-center justify-between gap-3 md:gap-0'>
             {/* Logo */}
-            <Link to='/' className='block  px-4 py-3 hover:bg-neutral-100 transition font-bold text-lg'>
+            <Link to='/' className='block  px-4 py-3 hover:bg-neutral-100 transition font-bold text-xl text-[#2c9caf]'>
               Phone World
             </Link>
             {/* Dropdown Menu */}
@@ -25,6 +25,16 @@ const Navbar = () => {
               <div className='flex flex-row items-center gap-3'>
                 {/* Become A Host btn */}
                 <div className='hidden md:block'>
+                <button className="button">Offers</button>
+                </div>
+                <div className='hidden md:block'>
+                <button className="button">Cover & Glass</button>
+                </div>
+                <div className='hidden md:block'>
+                <button className="button">Used Device</button>
+                </div>
+                <div className='hidden md:block'>
+                <button className="button">Blog</button>
                 </div>
                 {/* Dropdown btn */}
                 <div

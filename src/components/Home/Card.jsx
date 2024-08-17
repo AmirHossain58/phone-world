@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const Card = ({ phone }) => {
+  
   return (
-    <Link to={`/room/${phone?._id}`} className='col-span-1 cursor-pointer border p-2 group'>
+    <div className='col-span-1 cursor-pointer border p-2 group'>
       <div className='flex flex-col gap-2 w-full'>
         <div
           className='
@@ -17,15 +18,13 @@ const Card = ({ phone }) => {
           <img
             className='
                 object-contain 
-                mix-blend-color-burn
                 h-full 
                 w-full 
                 group-hover:scale-110 
                 transition
               ' 
-            src={phone?.productImage
-            }
-            alt='Room'
+            src={phone?.productImage}
+            alt='Phone'
           />  
           <div 
             className=' 
@@ -45,7 +44,7 @@ const Card = ({ phone }) => {
         </div>
           <div className='font-light'>{phone?.description}</div>
       </div>
-    </Link>
+    </div>
   )
 }
 
